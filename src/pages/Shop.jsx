@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ProductsContext } from "../contexts/ProductsContext.jsx";
+import Navbar from "../components/Navbar.jsx"
 
 function Product({ data }) {
   return (
@@ -11,5 +13,9 @@ function Product({ data }) {
 }
 
 export default function Shop() {
-  return <div>Shop bro</div>;
+  const { products } = useContext(ProductsContext);
+  return <div>
+    <Navbar/>
+    {products.map((product) => <Product data={product} />)}
+  </div>;
 }
