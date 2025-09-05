@@ -1,7 +1,7 @@
 .card {
-  max-height: 500px;
+  height: 400px;
   border: 1px solid black;
-  padding: 20px 0px;
+  padding: 30px 0px;
   transition: all 0.3s ease;
   cursor: pointer;
 }

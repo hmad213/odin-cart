@@ -1,6 +1,22 @@
 import styles from "../styles/Card.module.css";
+import { CartContext } from "../contexts/CartContext.jsx";
+import { useContext } from "react";
 
 export default function Card({ product }) {
+  const { cart, addToCart, removeFromCart } = useContext(CartContext);
+
+  let foundIndex = cart.findIndex((item) => {
+    return item.product.id == product.id;
+  });
+
+  function addProduct(){
+    addToCart(product);
+  }
+
+  function removeProduct(){
+    removeFromCart(product)
+  }
+
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
@@ -18,6 +34,15 @@ export default function Card({ product }) {
           ))}
         </span>
         <span>({product.rating.count})</span>
+        {foundIndex === -1 ? (
+          <button onClick={addProduct}>Add</button>
+        ) : (
+          <div className="buttons">
+            <button onClick={addProduct}>+</button>
+            <input type="text" value={cart[foundIndex].quantity} disabled/>
+            <button onClick={removeProduct}>-</button>
+          </div>
+        )}
       </div>
     </div>
   );
