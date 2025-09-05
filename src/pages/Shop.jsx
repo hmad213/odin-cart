@@ -1,21 +1,23 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ProductsContext } from "../contexts/ProductsContext.jsx";
-import Navbar from "../components/Navbar.jsx"
-
-function Product({ data }) {
-  return (
-    <div className="card">
-      <img src={data.image} alt="" />
-      <h1>{data.title}</h1>
-      <h3>{data.price}</h3>
-    </div>
-  );
-}
+import CardContainer from "../components/CardContainer.jsx";
+import Navbar from "../components/Navbar.jsx";
+import Sidebar from "../components/Sidebar.jsx";
+import styles from "../styles/Shop.module.css";
 
 export default function Shop() {
   const { products } = useContext(ProductsContext);
-  return <div>
-    <Navbar/>
-    {products.map((product) => <Product data={product} />)}
-  </div>;
+  const [currentCategory, setCurrentCategory] = useState("All Categories");
+  return (
+    <div>
+      <Navbar />
+      <main>
+        <Sidebar
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        />
+        <CardContainer currentCategory={currentCategory} />
+      </main>
+    </div>
+  );
 }

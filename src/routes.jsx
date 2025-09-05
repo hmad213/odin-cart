@@ -15,8 +15,8 @@ const routes = [
   },
   {
     path: "/cart",
-    element: <Cart/>
-  }
+    element: <Cart />,
+  },
 ];
 
 export default routes;

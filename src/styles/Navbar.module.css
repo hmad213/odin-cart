@@ -1,32 +1,33 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 60px;
-    min-height: 100px;
-    width: 100vw;
-    background-color: #0097B2;
-    color: white;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+  min-height: 100px;
+  width: 100%;
+  background-color: #0097b2;
+  color: white;
 }
 
-.navbar h1{
-    font-size: 3rem;
+.navbar h1 {
+  font-size: 3rem;
+  font-family: "Sriracha", cursive;
 }
 
-.navbar > div{
-    display: flex;
-    gap: 30px;
+.navbar > div {
+  display: flex;
+  gap: 30px;
 }
 
-.navbar button{
-    background-color: inherit;
-    border: none;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+.navbar button {
+  background-color: inherit;
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.navbar button:hover{
-    background-color: #006c80;
+.navbar button:hover {
+  background-color: #006c80;
 }
