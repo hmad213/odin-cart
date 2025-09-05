@@ -15,14 +15,14 @@ export default function Sidebar({ currentCategory, setCurrentCategory }) {
 
   return (
     <div className={styles.sidebar}>
-      {categories.map((category) => {
+      {categories.map((category, index) => {
         let buttonElement =
           category === currentCategory ? (
-            <button className={styles.selected} onClick={onClick}>
+            <button className={styles.selected} onClick={onClick} key={index}>
               {category}
             </button>
           ) : (
-            <button onClick={onClick}>{category}</button>
+            <button onClick={onClick} key={index}>{category}</button>
           );
 
         if (category != categories[categories.length - 1]) {

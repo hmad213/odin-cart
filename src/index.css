@@ -7,3 +7,15 @@
 :root {
   font-family: "Roboto", sans-serif;
 }
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}

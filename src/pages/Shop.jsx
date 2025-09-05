@@ -11,7 +11,7 @@ export default function Shop() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className={styles.main}>
         <Sidebar
           currentCategory={currentCategory}
           setCurrentCategory={setCurrentCategory}

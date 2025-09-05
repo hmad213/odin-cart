@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const total = cart.reduce((prev, item) => {
     return prev + item.quantity;
-  }, 0)
+  }, 0);
 
   return (
     <nav className={styles.navbar}>
@@ -23,7 +23,7 @@ export default function Navbar() {
           <button>Products</button>
         </Link>
         <Link to={"/cart"}>
-          <button>Cart{total}</button>
+          <button>Cart {total}</button>
         </Link>
       </div>
     </nav>

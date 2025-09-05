@@ -12,9 +12,9 @@ export default function CardContainer({ currentCategory }) {
     return product.category == currentCategory.toLowerCase();
   });
   return (
-    <div className={styles.cardContainer}>
+    <div key={currentCategory} className={styles.cardContainer}>
       {filteredProducts.map((product) => (
-        <Card product={product} />
+        <Card key={product.id} product={product} />
       ))}
     </div>
   );
