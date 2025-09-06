@@ -11,8 +11,9 @@ export default function Navbar() {
   }, 0);
 
   return (
+    <>
     <nav className={styles.navbar}>
-      <Link style={{ textDecoration: "none", color: "white" }} to={"/"}>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"/"}>
         <h1>Shop</h1>
       </Link>
       <div>
@@ -27,5 +28,7 @@ export default function Navbar() {
         </Link>
       </div>
     </nav>
+    <hr className={styles.hr}/>
+    </>
   );
 }
