@@ -1,9 +1,11 @@
 import styles from "../styles/Card.module.css";
 import { CartContext } from "../contexts/CartContext.jsx";
 import { useContext } from "react";
+import QuantityButtons from "./QuantityButtons.jsx";
 
 export default function Card({ product }) {
-  const { cart, addToCart, removeFromCart, removeAllFromCart } = useContext(CartContext);
+  const { cart, addToCart, removeFromCart, removeAllFromCart } =
+    useContext(CartContext);
 
   let foundIndex = cart.findIndex((item) => {
     return item.product.id == product.id;
@@ -17,8 +19,8 @@ export default function Card({ product }) {
     removeFromCart(product);
   }
 
-  function deleteProduct(){
-    removeAllFromCart(product)
+  function deleteProduct() {
+    removeAllFromCart(product);
   }
 
   return (
@@ -41,16 +43,20 @@ export default function Card({ product }) {
           <span>({product.rating.count})</span>
         </div>
         <div className={styles.buttons}>
-        {foundIndex === -1 ? (
-            <button onClick={addProduct} className={styles.addButton}>Add</button>
+          {foundIndex === -1 ? (
+            <button onClick={addProduct} className={styles.addButton}>
+              Add
+            </button>
           ) : (
             <>
-            <div className={styles.addRemoveButtons}>
-              <button onClick={addProduct}>+</button>
-              <input type="text" value={cart[foundIndex].quantity} disabled/>
-              <button onClick={removeProduct}>-</button>
-            </div>
-            <button className={styles.deleteButton} onClick={deleteProduct}>T</button>
+              <QuantityButtons
+                addProduct={addProduct}
+                removeProduct={removeProduct}
+                quantity={cart[foundIndex].quantity}
+              />
+              <button className={styles.deleteButton} onClick={deleteProduct}>
+                T
+              </button>
             </>
           )}
         </div>

@@ -39,39 +39,39 @@
   transform: scale(1.02);
 }
 
-.info{
+.info {
   padding: 0px 20px;
 }
 
-.card button{
+.card button {
   cursor: pointer;
 }
 
-.info > span{ 
-/* This is for price */
+.info > span {
+  /* This is for price */
   color: orangered;
   font-size: 24px;
 }
 
-.rating > span:first-child{
-  color:rgb(250, 189, 75);
+.rating > span:first-child {
+  color: rgb(250, 189, 75);
   font-size: 20px;
 }
 
-.stars{
-  color:rgb(250, 189, 75);
+.stars {
+  color: rgb(250, 189, 75);
   font-size: 30px;
   position: relative;
   top: -2px;
 }
 
-.rating{
+.rating {
   display: flex;
   gap: 6px;
   align-items: center;
 }
 
-.buttons{
+.buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -79,7 +79,7 @@
   top: 5px;
 }
 
-.addButton{
+.addButton {
   background-color: rgb(224, 10, 10);
   display: block;
   margin: auto;
@@ -89,17 +89,11 @@
   border: 1px solid black;
 }
 
-.addButton:hover{
+.addButton:hover {
   background-color: rgb(184, 10, 10);
 }
 
-.addRemoveButtons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.addRemoveButtons button, .deleteButton{
+.deleteButton {
   background-color: rgb(224, 10, 10);
   border: none;
   color: white;
@@ -109,26 +103,10 @@
   transition: transform 0.2s ease-out;
 }
 
-.addRemoveButtons button:first-child{
-  border-radius: 12px 0px 0px 12px;
-}
-
-.addRemoveButtons button:last-child{
-  border-radius: 0px 12px 12px 0px;
-  align-content: center;
-}
-
-.addRemoveButtons input{
-  text-align: center;
-  font-size: 16px;
-  width: 60px;
-  padding: 4px 0px;
-}
-
-.addRemoveButtons button:hover, .deleteButton:hover{
+.deleteButton:hover {
   transform: scale(1.2);
 }
 
-.deleteButton{
+.deleteButton {
   border-radius: 8px;
 }

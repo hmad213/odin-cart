@@ -22,7 +22,9 @@ export default function Sidebar({ currentCategory, setCurrentCategory }) {
               {category}
             </button>
           ) : (
-            <button onClick={onClick} key={index}>{category}</button>
+            <button onClick={onClick} key={index}>
+              {category}
+            </button>
           );
 
         if (category != categories[categories.length - 1]) {

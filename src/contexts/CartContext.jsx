@@ -50,11 +50,13 @@ export function CartProvider({ children }) {
       }
 
       return prevCart.filter((item) => item.product.id !== product.id);
-    })
+    });
   }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, removeAllFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, removeAllFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );

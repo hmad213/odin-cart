@@ -1,0 +1,36 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  background-color: rgb(224, 10, 10);
+  border: none;
+  color: white;
+  height: 30px;
+  width: 30px;
+  font-size: 24px;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  border-radius: 12px 0px 0px 12px;
+}
+
+.buttons button:last-child {
+  border-radius: 0px 12px 12px 0px;
+  align-content: center;
+}
+
+.buttons input {
+  text-align: center;
+  font-size: 16px;
+  width: 60px;
+  padding: 4px 0px;
+}
+
+.buttons button:hover {
+  transform: scale(1.2);
+}

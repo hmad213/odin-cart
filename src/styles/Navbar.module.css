@@ -23,10 +23,10 @@
   text-decoration: none;
   font-size: 20px;
   cursor: pointer;
-  position: relative
+  position: relative;
 }
 
-.hr{
+.hr {
   width: 80%;
   margin: auto;
   height: 3px;
